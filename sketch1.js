@@ -1,4 +1,4 @@
-var charater_walk, charater_idle, thunder;
+var charater_walk, charater_idle, charater_jump, thunder;
 var character_sheet, charater_animation, character_sprite;
 var ground;
 var tile, tiles;
@@ -9,12 +9,10 @@ var flowGroup;
 var collideGroup, thunderGroup;
 var gameOver = false;
 
-
-
 function preload(){
-  charater_walk = loadAnimation("/charater/walk1.png","/charater/walk23.png");
-  charater_idle = loadAnimation("/charater/idle1.png","/charater/idle14.png");
-  charater_jump = loadAnimation("/charater/jump1.png","/charater/jump29.png");
+  charater_walk = loadAnimation("/character/walk1.png","/character/walk23.png");
+  charater_idle = loadAnimation("/character/idle1.png","/character/idle14.png");
+  charater_jump = loadAnimation("/character/jump1.png","/character/jump29.png");
   
   thunder = loadAnimation("/Thunder/thunder1.png", "/Thunder/thunder12.png");
 }
@@ -31,7 +29,7 @@ function setup(){
   character_sprite.addAnimation('jump', charater_jump);
 
   collideGroup = new Group();
-  thunderGroup = new Group;
+  thunderGroup = new Group();
   var tile_x = 0;
   var tile_y = 0;
   for (var i = 0; i < 40; i++) {
@@ -48,7 +46,9 @@ function setup(){
       collideGroup.add(new Tile().add(tile_x+=20, canvasHeight*0.95+i*10, 20));
     }
   }
+  useQuadTree(true);
   Block(canvasWidth/4, canvasHeight*0.7, 1, 6, collideGroup);
+  
 
   
 }
@@ -67,18 +67,15 @@ function draw(){
     //   character_sprite.position.y = canvasHeight-50;
     // }
     character_sprite.changeAnimation('idle');
-    character_sprite.mass = 20;
-    //gravity for the player
     character_sprite.velocity.y += GRAVITY;
-    // if(character_sprite.velocity.y > 20){
-    //   character_sprite.velocity.y = 0;
-    // }
-    // if (character_sprite.position.y == canvasHeight){
-    //   character_sprite.velocity = 0;
-    // }
+    
     if(character_sprite.collide(collideGroup)){
+      console.log(character_sprite.collide(collideGroup))
       character_sprite.velocity.y = 0;
     };
+    character_sprite.mass = 20;
+    //gravity for the player
+    character_sprite.maxSpeed = 50;
     // if(character_sprite.position.x > 670 || character_sprite.position.y > 550){
     //   character_sprite.position = createVector();
     // }
@@ -100,7 +97,6 @@ function draw(){
     playerControl();
     drawSprites();
   }
-  console.log(character_sprite.position);
 }
 
 function die(){
@@ -119,11 +115,9 @@ function die(){
 function newGame(){
   thunderGroup.removeSprites();
   gameOver = false;
-  updateSprites(true);
   character_sprite.position = createVector(Math.round(random(50,canvasWidth-50)), Math.round(random(50, canvasHeight-50)));
-  if(character_sprite.collide(collideGroup)){
-    character_sprite.velocity.y = 0;
-  };
+  // updateSprites(true);
+  
 }
 
 function spawnThunder(x, y){
