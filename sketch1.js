@@ -47,8 +47,9 @@ function setup(){
     }
   }
   useQuadTree(true);
-  Block(canvasWidth/4, canvasHeight*0.7, 1, 6, collideGroup);
-  
+  Block(canvasWidth*0.80, canvasHeight*0.7, 2, 6, collideGroup);
+  Block(canvasWidth*0.73, canvasHeight*0.768, 2, 9, collideGroup);
+  Block(canvasWidth*0.66, canvasHeight*0.835, 3, 11, collideGroup);  
 
   
 }
@@ -57,23 +58,23 @@ function draw(){
   if(character_sprite.position.y > canvasHeight+40 || character_sprite.position.x > canvasWidth+40){
     die();
   }
-  if(gameOver && keyWentDown('space'))
+
+  if(gameOver && keyWentDown('space')){
     newGame();
+  }
 
   if(gameOver != true){
     background(0);
-    // if(character_sprite.position.y > canvasHeight-50){
-    //   console.log(character_sprite.position.y);
-    //   character_sprite.position.y = canvasHeight-50;
-    // }
     character_sprite.changeAnimation('idle');
     character_sprite.velocity.y += GRAVITY;
     
-    if(character_sprite.collide(collideGroup)){
-      console.log(character_sprite.collide(collideGroup))
+    character_sprite.collide(collideGroup, function () {
       character_sprite.velocity.y = 0;
-    };
-    character_sprite.mass = 20;
+    })
+    // if(character_sprite.collide(collideGroup)){
+    //   console.log('x')
+    //   character_sprite.velocity.y = 0;
+    // };
     //gravity for the player
     character_sprite.maxSpeed = 50;
     // if(character_sprite.position.x > 670 || character_sprite.position.y > 550){
@@ -116,7 +117,7 @@ function newGame(){
   thunderGroup.removeSprites();
   gameOver = false;
   character_sprite.position = createVector(Math.round(random(50,canvasWidth-50)), Math.round(random(50, canvasHeight-50)));
-  // updateSprites(true);
+  updateSprites(true);
   
 }
 
