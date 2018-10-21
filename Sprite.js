@@ -5,7 +5,7 @@ function Tile(){
     this.size = size;
     // this.num = num;
     this.tile = createSprite(this.x,this.y, this.size, this.size);
-    this.tile.addImage(loadImage('Ground/ground0_20x20.png'));
+    this.tile.addImage(ground);
   
     // this.tile.width = this.size;
     // this.tile.height = this.size;
