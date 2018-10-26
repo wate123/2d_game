@@ -5,7 +5,7 @@ var tile, tiles;
 var keyMap;
 var canvasWidth, canvasHeight;
 var GRAVITY = 1, jumpPower = 5;
-var collideGroup, damageGroup, fallGroup, starGroup;
+var collideGroup, damageGroup, fallGroup, starGroup, breakGroup;
 var gameOver = false;
 
 function preload(){
@@ -28,6 +28,10 @@ function setup(){
   spike_sprite = createSprite(canvasWidth*0.26, canvasHeight*0.91);
   star_sprite = createSprite(canvasWidth*0.38, canvasHeight*0.91);
   environment();
+  
+  for (let i = 0; i < breakGroup.length; i++) {
+    breakGroup[i].touching.top = false;
+  }
 }
 
 function draw(){
@@ -50,13 +54,13 @@ function draw(){
     })
     //collide falling structure.
     character_sprite.displace(fallGroup, function () {
-      character_sprite.velocity.y = 20;
+      character_sprite.velocity.y = 10;
     })
 
     //colide reward and trigger spike
     character_sprite.overlap(starGroup, function(){
       star_sprite.remove();
-      spike_sprite.velocity.x = 10;
+      spike_sprite.velocity.x = 2;
     })
 
     //colide with damage group
@@ -65,6 +69,9 @@ function draw(){
         die();
       },100)
       
+    })
+    character_sprite.overlap(breakGroup, function(current, collide){
+      collide.remove();
     })
     // if(character_sprite.collide(collideGroup)){
     //   console.log('x')
@@ -159,6 +166,7 @@ function environment(){
   damageGroup = new Group();
   fallGroup = new Group();
   starGroup = new Group();
+  breakGroup = new Group();
 
   var tile_x = 0;
   var tile_y = 0;
@@ -174,7 +182,7 @@ function environment(){
   for (var i = 1; i < 4; i++) {
     tile_x = 0;
     for (var j = 0; j < 40; j++) {
-      if(j > 24 || (j > 18 && j <23) || (j >5 && j<8)){
+      if(j > 24 || (j > 18 && j <23) || (j >2 && j<9)){
         fallGroup.add(new Tile().add(tile_x+=20, canvasHeight*0.95+i*10, 20));
       }else{
         collideGroup.add(new Tile().add(tile_x+=20, canvasHeight*0.95+i*10, 20));
@@ -186,8 +194,9 @@ function environment(){
   Block(canvasWidth*0.80, canvasHeight*0.7, 7, 6, collideGroup);
   Block(canvasWidth*0.743, canvasHeight*0.768, 5, 2, fallGroup);
   Block(canvasWidth*0.657, canvasHeight*0.835, 3, 3, collideGroup);
-  Block(canvasWidth*0.3, canvasHeight*0.75, 3, 8, collideGroup);
-  Block(canvasWidth*0.215, canvasHeight*0.75, 3, 3, collideGroup);
+  Block(canvasWidth*0.42, canvasHeight*0.75, 3, 3, collideGroup);
+  Block(canvasWidth*0.332, canvasHeight*0.75, 2, 3, breakGroup);
+  Block(canvasWidth*0.215, canvasHeight*0.75, 3, 4, collideGroup);
   Block(canvasWidth*0.158, canvasHeight*0.815, 4, 2, fallGroup);
   Block(canvasWidth*0.1, canvasHeight*0.88, 2, 2, fallGroup);
 
