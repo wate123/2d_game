@@ -2,6 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45da20b3-c513-4f7d-bbc3-2b57ff69159b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/character_idle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/character_idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/character_jump.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/character_jump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/character_walk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/character_walk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle1.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle10.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle11.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle12.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle13.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle14.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle2.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle3.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle4.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle5.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle6.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle7.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle8.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/idle9.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/idle9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump1.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump10.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump11.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump12.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump13.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump14.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump15.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump16.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump17.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump18.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump19.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump2.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump20.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump21.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump22.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump23.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump24.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump25.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump26.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump27.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump28.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump29.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump3.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump4.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump5.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump6.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump7.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump8.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/jump9.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/jump9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk1.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk10.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk11.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk12.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk13.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk14.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk15.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk16.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk17.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk18.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk19.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk2.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk20.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk21.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk22.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk23.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk3.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk4.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk5.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk6.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk7.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk8.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/walk9.png" beforeDir="false" afterPath="$PROJECT_DIR$/character/walk9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sketch1.js" beforeDir="false" afterPath="$PROJECT_DIR$/sketch1.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,20 +119,40 @@
     <session id="1446845802">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sketch1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            <state relative-caret-position="210">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -87,7 +180,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="720" />
     <option name="y" value="23" />
     <option name="width" value="720" />
@@ -103,8 +196,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="p5exmaple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p5exmaple" type="462c0819:PsiDirectoryNode" />
+              <item name="2d_game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2d_game" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -130,6 +223,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2d_game/index.html">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -142,14 +245,15 @@
       <updated>1538067822163</updated>
       <workItem from="1538067825232" duration="173000" />
       <workItem from="1539808361875" duration="384000" />
+      <workItem from="1543522088232" duration="76000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557000" />
+    <option name="totallyTimeSpent" value="633000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="720" height="808" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="828" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24892704" />
@@ -180,13 +284,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sketch1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="210">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sprite.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

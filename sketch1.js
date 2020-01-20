@@ -1,5 +1,5 @@
 var charater_walk, charater_idle, charater_jump, thunder, ground;
-var character_sheet, charater_animation, character_sprite, spike_sprite, star_sprite;
+var character_sheet, charater_animation, character_sprite, spike_sprite, star_sprite, star_sprite2, star_sprite3;
 var ground, spike, star;
 var tile, tiles;
 var keyMap;
@@ -7,6 +7,7 @@ var canvasWidth, canvasHeight;
 var GRAVITY = 1, jumpPower = 5;
 var collideGroup, damageGroup, fallGroup, starGroup, breakGroup;
 var gameOver = false;
+var random_x_points = [];
 
 function preload(){
   charater_walk = loadAnimation("/character/walk1.png","/character/walk23.png");
@@ -27,11 +28,29 @@ function setup(){
   character_sprite = createSprite(canvasWidth*0.95, canvasHeight/2);
   spike_sprite = createSprite(canvasWidth*0.26, canvasHeight*0.91);
   star_sprite = createSprite(canvasWidth*0.38, canvasHeight*0.91);
+  star_sprite2 = createSprite(40, canvasHeight*0.9);
   environment();
   
-  for (let i = 0; i < breakGroup.length; i++) {
+  for (var i = 0; i < breakGroup.length; i++) {
     breakGroup[i].touching.top = false;
   }
+
+  for (var i = 0; i < Math.round(random(5, 15)); i++) {
+    random_x_points.push(Math.round(random(20, canvasWidth-80)));
+  }
+
+  for (var i = 0; i < collideGroup.length; i++) {
+    for (var j = 0; j < random_x_points.length; j++) {
+      if(collideGroup[i].position.x < random_x_points[j]+10 && collideGroup[i].position.x > random_x_points[j]-10 ){
+        // collideGroup[i].debug = true;
+        fallGroup.add(collideGroup[i]);
+      }
+    }
+  }
+  // for (var i = 0; i < collideGroup.length; i++) {
+  //   collideGroup[i].debug = true;
+  // }
+  // console.log(Math.round(random(collideGroup.length)))
 }
 
 function draw(){
@@ -53,9 +72,9 @@ function draw(){
       character_sprite.velocity.y = 0;
     })
     //collide falling structure.
-    character_sprite.displace(fallGroup, function () {
-      character_sprite.velocity.y = 10;
-    })
+    // character_sprite.displace(fallGroup, function () {
+    //   character_sprite.velocity.y = 10;
+    // })
 
     //colide reward and trigger spike
     character_sprite.overlap(starGroup, function(){
@@ -70,7 +89,8 @@ function draw(){
       },100)
       
     })
-    character_sprite.overlap(breakGroup, function(current, collide){
+    character_sprite.overlap(fallGroup, function(current, collide){
+      character_sprite.velocity.y = 15;
       collide.remove();
     })
     // if(character_sprite.collide(collideGroup)){
@@ -159,6 +179,7 @@ function environment(){
 
   spike_sprite.addImage('spike', spike);
   star_sprite.addImage('star', star);
+  star_sprite2.addImage('star', star);
 
   spike_sprite.rotation = 90;
 
@@ -182,23 +203,31 @@ function environment(){
   for (var i = 1; i < 4; i++) {
     tile_x = 0;
     for (var j = 0; j < 40; j++) {
-      if(j > 24 || (j > 18 && j <23) || (j >2 && j<9)){
-        fallGroup.add(new Tile().add(tile_x+=20, canvasHeight*0.95+i*10, 20));
-      }else{
+      // if(j > 24 || (j > 18 && j <23) || (j >2 && j<9)){
+      //   fallGroup.add(new Tile().add(tile_x+=20, canvasHeight*0.95+i*10, 20));
+      // }else{
         collideGroup.add(new Tile().add(tile_x+=20, canvasHeight*0.95+i*10, 20));
-      }
+      // }
     }
   }
-  useQuadTree(true);
   //level blocks
   Block(canvasWidth*0.80, canvasHeight*0.7, 7, 6, collideGroup);
-  Block(canvasWidth*0.743, canvasHeight*0.768, 5, 2, fallGroup);
+  Block(canvasWidth*0.743, canvasHeight*0.768, 5, 2, collideGroup);
   Block(canvasWidth*0.657, canvasHeight*0.835, 3, 3, collideGroup);
   Block(canvasWidth*0.42, canvasHeight*0.75, 3, 3, collideGroup);
   Block(canvasWidth*0.332, canvasHeight*0.75, 2, 3, breakGroup);
   Block(canvasWidth*0.215, canvasHeight*0.75, 3, 4, collideGroup);
-  Block(canvasWidth*0.158, canvasHeight*0.815, 4, 2, fallGroup);
-  Block(canvasWidth*0.1, canvasHeight*0.88, 2, 2, fallGroup);
+  Block(canvasWidth*0.158, canvasHeight*0.815, 4, 2, collideGroup);
+  Block(canvasWidth*0.1, canvasHeight*0.88, 2, 2, collideGroup);
+
+  Block(0, canvasHeight*0.2, 5, 10, collideGroup);
+  Block(canvasWidth*0.285, canvasHeight*0.3, 4, 8, collideGroup);
+  Block(canvasWidth*0.43, canvasHeight*0.38, 4, 8, collideGroup);
+
+  Block(canvasWidth*0.75, 0, 4, 8, collideGroup);
+  Block(canvasWidth*0.83, canvasHeight*0.1, 4, 5, collideGroup);
+  Block(canvasWidth*0.9, canvasHeight*0.2, 4, 3, collideGroup);
+
 
   //reward
   starGroup.add(star_sprite);
